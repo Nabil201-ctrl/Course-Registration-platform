@@ -1,7 +1,7 @@
 import pg from "pg";
 
 
-const  pg = new pg.Pool({
+const Pool = new pg.Pool({
     host: "localhost",
     port: 5432,
     user: "postgres",
