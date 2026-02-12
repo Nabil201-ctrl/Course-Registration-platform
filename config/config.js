@@ -1,6 +1,5 @@
 import pg from "pg";
 
-
 const Pool = new pg.Pool({
     host: "localhost",
     port: 5432,
@@ -9,4 +8,4 @@ const Pool = new pg.Pool({
     database: "course-registration"
 })
 
-export default pg;
+export default { Pool };
