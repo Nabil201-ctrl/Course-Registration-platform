@@ -1,15 +1,16 @@
 import express from "express";
 import router from "./routes/routes.js";
-import config from "./config/config.js";
-
+import pool from "./config/config.js";
+import swaggerUi from "swagger-ui-express";
+import specs from "./config/swagger.js";
 const app = express();
-const { Pool } = config;
 
 app.use(express.json());
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
 app.use("/api", router);
 
 // Test database connection on startup
-Pool.query('SELECT NOW()', (err, res) => {
+pool.query('SELECT NOW()', (err, res) => {
     if (err) {
         console.error("Database connection failed:", err);
         process.exit(1);
