@@ -11,7 +11,7 @@ A Node.js Express application for managing courses, students, and registrations.
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/Nabil201-ctrl/Course-Registration-platform
     cd course-management-system
     ```
 
